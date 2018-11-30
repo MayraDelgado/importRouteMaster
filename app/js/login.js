@@ -179,18 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
           password = document.getElementById("password").value;
 
         authenticationCallback(server, database, email, password, function (error) {
-          //alert(error);
-          const toast = swal.mixin({
-            toast: true,
-            position: 'center',
-            showConfirmButton: false,
-            timer: 7000
-          });
-
-          toast({
-            type: 'error',
-            text: error
-          })
+          alert(error);
           signOut();
         });
 
